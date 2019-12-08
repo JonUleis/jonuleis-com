@@ -1,6 +1,7 @@
 <template lang="pug">
   #app(:class="{'is-desktop': !isMobile().any}")
-    object.logo#logo(type="image/svg+xml",:data="require('./assets/logo.svg')",ref="logo")
+    header.header(:class="{'header--intro': intro}")
+      object.logo#logo(type="image/svg+xml",:data="require('./assets/logo.svg')",ref="logo")
 </template>
 
 <script>
@@ -12,7 +13,8 @@ export default {
   components: {},
   data() {
     return {
-      isMobile
+      isMobile,
+      intro: true
     };
   },
   mounted() {
@@ -23,14 +25,30 @@ export default {
         delay: 130,
         animTimingFunction: Vivus.EASE,
         onReady: svg => {
+          let logo = this.$refs.logo;
+          logo.style.transition = "none";
+          logo.style.transform = `translate(${window.innerWidth / 2 -
+            logo.clientWidth / 2}px, ${window.innerHeight / 2 -
+            logo.clientHeight / 2}px)`;
+          logo.style.width = `${logo.clientWidth}px`;
+          logo.style.height = `${logo.clientHeight}px`;
+          logo.style.transition = "";
           svg.el.classList.remove("hide");
         }
       },
-
       svg => {
+        let logo = this.$refs.logo;
         svg.el.classList.add("loaded");
+        logo.style.transform = "";
+        logo.style.width = "";
+        logo.style.height = "";
+        this.intro = false;
       }
     );
   }
 };
 </script>
+
+<style lang="scss">
+@import "styles/main";
+</style>

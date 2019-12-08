@@ -1,0 +1,53 @@
+// sizes
+$tablet: 768px;
+$desktop: 980px;
+$phoneMin: 320px;
+
+// fonts
+$themeFont: 'Roboto', sans-serif;
+$fontWeightRegular: 300;
+$fontWeightSemibold: 500;
+
+// colors
+$mainTextColor: #444;
+$lightTextColor: #666;
+$linkColor: #208AAD;
+
+// animations
+$transitionSpeed: .3s;
+$siteGateSpeed: .6s;
+
+@keyframes rotate {
+  0%   { transform: rotate(0deg);   }
+  100% { transform: rotate(359deg); }
+}
+
+@keyframes fade-out {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+// utils
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $desktop - 1) {
+    @content;
+  }
+}
+
+@mixin tablet-plus {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: $tablet - 1) {
+    @content;
+  }
+}
