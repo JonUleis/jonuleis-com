@@ -1,0 +1,269 @@
+const data = {
+  contact: [
+    {
+      link: "mailto:hi@jonuleis.com",
+      text: "hi@jonuleis.com",
+      icon: "fa-envelope-o"
+    },
+    {
+      link: "https://twitter.com/MovingToTheSun",
+      text: "Twitter",
+      icon: "fa-twitter"
+    },
+    {
+      link: "https://www.instagram.com/movingtothesun/",
+      text: "Instagram",
+      icon: "fa-instagram"
+    },
+    {
+      link: "https://stackoverflow.com/users/4573410/jon-uleis",
+      text: "Stack Overflow",
+      icon: "fa-stack-exchange"
+    },
+    { link: "https://github.com/jonuleis", text: "GitHub", icon: "fa-github" },
+    {
+      link: "https://www.linkedin.com/in/jonuleis/",
+      text: "LinkedIn",
+      icon: "fa-linkedin-square"
+    }
+  ],
+  work: [
+    {
+      name: "doomsday",
+      url: "http://doomsday.syfy.com/",
+      link: "doomsday.syfy.com",
+      copy:
+        'Built at Ralph. Launched June 2019.\nGame with High Scores & Shareables for "Krypton".'
+    },
+    {
+      name: "bandersnatch",
+      url: "https://tuckersoft.net/ealing20541/",
+      link: "tuckersoft.net",
+      copy:
+        "Solo Project at Ralph. Launched December 2018.\nIn-World Retro Easter Egg Site for Netflix Original."
+    },
+    {
+      name: "realcountry",
+      url: "https://www.realcountry.tv/",
+      link: "realcountry.tv",
+      copy:
+        "Solo Project at Ralph. Launched November 2018.\nReality Show Hub with Bios, Performances & Polls."
+    },
+    {
+      name: "savethedate",
+      url: "https://jonuleis.com/jomanda/",
+      link: "jomanda.life",
+      copy:
+        "Solo Freelance. Launched September 2018.\nMobile-Focused Wedding Invitation Game."
+    },
+    {
+      name: "purge",
+      url: "https://www.thepurge.tv/",
+      link: "thepurge.tv",
+      copy:
+        "Built at Ralph. Launched July 2018.\nImmersive Video-Driven Series Launch Site."
+    },
+    {
+      name: "arrested",
+      url: "https://www.votebluth.com/",
+      link: "votebluth.com",
+      copy:
+        "Solo Project at Ralph. Launched May 2018.\nIn-World Retro Campaign Site for Netflix Original."
+    },
+    {
+      name: "parquet",
+      url: "https://wideawake.am/",
+      link: "wideawake.am",
+      copy:
+        "Solo Freelance. Launched April 2018.\nAlbum Teaser & Spotify Player for Beggars/Rough Trade."
+    },
+    {
+      name: "jicks",
+      url: "http://howharddoyousparkle.com/",
+      link: "howharddoyousparkle.com",
+      copy:
+        "Solo Freelance. Launched April 2018.\nSpotify-Connected Quiz Game for Beggars/Matador."
+    },
+    {
+      name: "bmdj",
+      url: "https://coach.dating/",
+      link: "coach.dating",
+      copy:
+        "Built at Ralph. Launched February 2018.\nIn-World Shareable Generator for Netflix Original."
+    },
+    {
+      name: "wanna",
+      url: "https://wannatou.ch/",
+      link: "wannatou.ch",
+      copy:
+        "Solo Freelance. Launched February 2018.\nInteractive Streaming App & Info Site for WANNA."
+    },
+    {
+      name: "breeders",
+      url: "http://www.thebreedersmusic.com/breedersdigest/",
+      link: "thebreedersmusic.com",
+      copy:
+        "Solo Freelance. Launched February 2018.\nSpotify-Connected Quiz Game for Beggars/4AD."
+    },
+    {
+      name: "strangerthings",
+      url: "https://feeddart.com/",
+      link: "feeddart.com",
+      copy:
+        "Built at Ralph. Launched November 2017.\nShareable Video Generator for Netflix Original."
+    },
+    {
+      name: "ecoin",
+      url: "https://e-coin.com/",
+      link: "e-coin.com",
+      copy:
+        "Built at Ralph. Launched at San Diego Comic-Con 2017.\n2018 Emmy Nominee & 2018 Shorty Winner for Mr. Robot."
+    },
+    {
+      name: "mrrobot",
+      url: "https://www.whoismrrobot.com/",
+      link: "whoismrrobot.com",
+      copy:
+        "Built at Ralph. Launched for Season 2.\n2017 Webby Winner for Websites: Television Category."
+    },
+    {
+      name: "mon",
+      url: "http://clashofthecupcakes.com/",
+      link: "clashofthecupcakes.com",
+      copy:
+        'Built at Ralph. Launched May 2017.\n"Clash of the Cupcakes" Site for Netflix Original.'
+    },
+    {
+      name: "lph",
+      url: "http://lphishiring.com/",
+      link: "lphishiring.com",
+      copy:
+        'Solo Project at Ralph. Launched April 2017.\nIn-World Restaurant Site for "Better Call Saul".'
+    },
+    {
+      name: "bcs",
+      url: "http://bcsbingo.amc.com/",
+      link: "bcsbingo.com",
+      copy:
+        "Built at Ralph. Launched April 2017.\nWeekly Trivia Game for AMC/Acura Sponsorship."
+    },
+    {
+      name: "blackmirror",
+      url: "https://rateme.social/",
+      link: "rateme.social",
+      copy:
+        "Built at Ralph. Launched November 2016.\nIn-World Shareable Generator for Netflix Original."
+    },
+    {
+      name: "gilmore",
+      url: "https://www.townofstarshollow.org/",
+      link: "townofstarshollow.org",
+      copy:
+        "Built at Ralph. Launched October 2016.\nIn-World WordPress Blog for Netflix Original."
+    },
+    {
+      name: "lhf",
+      url: "http://www.londonhasfallen.com/",
+      link: "londonhasfallen.com",
+      copy:
+        "Built at Ralph. Launched November 2015.\nResponsive Site for Focus Features Film."
+    },
+    {
+      name: "spotify",
+      url: "https://spotifycharts.com/",
+      link: "spotifycharts.com",
+      copy:
+        "Built at Ralph. Launched October 2015.\nResponsive Charts Site for Spotify."
+    },
+    {
+      name: "glc",
+      url: "http://www.grandluxcafe.com",
+      link: "grandluxcafe.com",
+      copy:
+        "Solo Project at Lightmaker. Launched April 2015.\nFull Desktop, Tablet & Mobile Site Redesign."
+    },
+    {
+      name: "wocket",
+      url: "http://wocketwallet.com",
+      link: "wocketwallet.com",
+      copy:
+        "Solo Project at Lightmaker. Launched January 2015.\nResponsive Shopify Site w/Parallax Scrolling."
+    },
+    {
+      name: "ccf",
+      url: "http://www.thecheesecakefactory.com",
+      link: "thecheesecakefactory.com",
+      copy:
+        "Solo Project at Lightmaker. Launched December 2014.\nFull Desktop & Mobile Site Redesign, Single-Page App."
+    },
+    {
+      name: "sonos",
+      url: "http://www.sonos.com",
+      link: "sonos.com",
+      copy:
+        "Built at Lightmaker. Launched September 2014.\nResponsive Redesign of Main Site and Support Portal."
+    },
+    {
+      name: "mayo",
+      url: "http://www.mayoclinichealthsystem.com",
+      link: "mayoclinichealthsystem.com",
+      copy:
+        "Solo Project at Lightmaker. Launched August 2014.\nMobile Site Redesign."
+    }
+  ],
+  photos: [
+    {
+      name: "tmbg2018",
+      url: "/assets/tmbg_2018_live.pdf",
+      link: "They Might Be Giants 2018 Live",
+      copy:
+        'They Might Be Giants — "2018 Live" CD.\nPhotos used for official album liner notes.'
+    },
+    {
+      name: "om2015jan",
+      url: "https://www.flickr.com/photos/capitalq/sets/72157649986149039/",
+      link: "of Montreal @ The Social",
+      copy: "of Montreal — January 15-17, 2015.\nThe Social, Orlando, FL."
+    },
+    {
+      name: "mm2014may",
+      url: "https://www.flickr.com/photos/capitalq/sets/72157644726619281/",
+      link: "Modest Mouse @ The Beacham",
+      copy: "Modest Mouse — May 15-16, 2014.\nThe Beacham, Orlando, FL."
+    },
+    {
+      name: "tmbg2013aug",
+      url: "https://www.flickr.com/photos/capitalq/sets/72157635050375384/",
+      link: "They Might Be Giants @ Celebrate Brooklyn",
+      copy:
+        "They Might Be Giants — August 10, 2013.\nCelebrate Brooklyn, Prospect Park, NY."
+    },
+    {
+      name: "mt2013june",
+      url: "https://www.flickr.com/photos/capitalq/sets/72157645137276421/",
+      link: "Morning Teleportation @ Brooklyn Bowl",
+      copy:
+        "Morning Teleportation — June 30, 2013.\nBrooklyn Bowl, Brooklyn, NY."
+    },
+    {
+      name: "sufjan2011",
+      url: "https://www.flickr.com/photos/capitalq/sets/72157627347897826/",
+      link: "Sufjan Stevens @ Celebrate Brooklyn",
+      copy:
+        "Sufjan Stevens — August 2, 2011.\nCelebrate Brooklyn, Prospect Park, NY."
+    },
+    {
+      name: "instagram",
+      url: "https://www.instagram.com/movingtothesun",
+      link: "Jon's Instagram",
+      copy: "Instagram\n@movingtothesun"
+    },
+    {
+      name: "flickr",
+      url: "https://www.flickr.com/photos/capitalq/sets/",
+      link: "Jon's Flickr",
+      copy: "Flickr\n@CapitalQ"
+    }
+  ]
+};
+export default data;

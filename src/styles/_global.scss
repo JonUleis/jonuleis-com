@@ -4,3 +4,46 @@
   box-sizing: inherit;
 }
 
+body {
+  background: #fff;
+  box-sizing: border-box;
+  font-family: $themeFont;
+  font-weight: $fontWeightRegular;
+  min-width: 320px;
+}
+
+a {
+  color: $linkColor;
+  text-decoration: none;
+
+  &:hover {
+    color: lighten($linkColor, 10%);
+  }
+}
+
+.app {
+  &--intro {
+    position: absolute;
+    overflow-y: scroll;
+    height: 100%;
+    width: 100%;
+
+    .wrapper {
+      height: 100%;
+      position: absolute;
+      overflow: hidden;
+      width: 100%;
+    }
+  }
+
+  &--initial {
+    .header ~ * {
+      display: none;
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $fontWeightRegular;
+  margin: 0;
+}

@@ -1,3 +1,30 @@
+.header {
+  + .section {
+    padding-top: 8.6em;
+  }
+
+  ~ .section {
+    transition: opacity .5s, transform .5s;
+  }
+
+  + .section + .section {
+    transition-delay: .3s;
+  }
+
+  &--animating {
+    & ~ .section,
+    .header__links {
+      opacity: .0001;
+      pointer-events: none;
+      transform: translateY(-2em);
+    }
+
+    .header__links {
+      transform: none;
+    }
+  }
+}
+
 .logo {
   display: block;
   height: 6.6em;
@@ -5,11 +32,79 @@
   max-width: 50vw;
   position: absolute;
   transform: translate(1em, 1em);
-  transition: all .8s .6s ease-out;
+  transition: all .6s .4s ease-out;
   width: 6em;
 
   .header--intro & {
     height: 100%;
     width: 100%;
+  }
+}
+
+.header__links {
+  position: absolute;
+  right: 1em;
+  top: 5.8em;
+  transition: opacity .4s, transform .4s;
+  z-index: 1;
+}
+
+.contact-link {
+  display: inline-block;
+  margin: 0 0 0 1em;
+  position: relative;
+
+  &::before {
+    background: black;
+    border-radius: .2em;
+    color: white;
+    content: attr(data-hover);
+    display: inline-block;
+    font-family: $themeFont;
+    font-size: .9em;
+    left: 50%;
+    line-height: 2em;
+    opacity: 0;
+    padding: 0 .5em;
+    pointer-events: none;
+    position: absolute;
+    top: -2.2em;
+    transform: translateX(-50%) translateY(2em);
+    transition: opacity $transitionSpeed, transform $transitionSpeed;
+    white-space: nowrap;
+  }
+
+  &:hover {
+    .fa {
+      color: #222;
+    }
+
+    &::before {
+      opacity: 1;
+      pointer-events: all;
+      transform: translateX(-50%);
+    }
+  }
+
+  .header & {
+    &:last-child {
+      &::before {
+        left: auto;
+        right: 0;
+        transform: translateY(2em);
+      }
+
+      &:hover {
+        &::before {
+          transform: none;
+        }
+      }
+    }
+  }
+
+  .fa {
+    color: black;
+    font-size: 2em;
+    transition: color $transitionSpeed;
   }
 }
