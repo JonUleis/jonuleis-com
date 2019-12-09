@@ -12,12 +12,24 @@ body {
   min-width: 320px;
 }
 
-a {
+p a {
   color: $linkColor;
   text-decoration: none;
+  border-bottom: .05em solid transparent;
+  transition: color .3s, border-color .3s;
+
+  &:hover {
+    border-color: currentColor;
+  }
+
+  .app--dark & {
+    color: lighten($linkColor, 40%);
+  }
 }
 
 .app {
+  transition: background-color .3s, color .3s;
+
   &--intro {
     position: absolute;
     overflow-y: scroll;
@@ -36,6 +48,11 @@ a {
     .header ~ * {
       display: none;
     }
+  }
+
+  &--dark {
+    background: black;
+    color: white;
   }
 }
 

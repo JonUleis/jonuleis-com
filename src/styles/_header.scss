@@ -3,24 +3,67 @@
     padding-top: 8.6em;
   }
 
-  ~ .section {
-    transition: opacity .5s, transform .5s;
+  ~ .section,
+  &__light,
+  &__links {
+    transition: opacity .3s ease-out, transform .5s ease-out;
+  }
+
+  + .section {
+    transition-delay: .2s;
   }
 
   + .section + .section {
-    transition-delay: .3s;
+    transition-delay: .4s;
   }
 
   &--animating {
     & ~ .section,
+    .header__light,
     .header__links {
       opacity: .0001;
       pointer-events: none;
-      transform: translateY(-2em);
+      transform: translateY(-1em);
     }
+  }
 
-    .header__links {
-      transform: none;
+  &__light {
+    appearance: none;
+    background: none;
+    border-radius: 0;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    outline: 0;
+    padding: 0;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 1;
+
+    .fa {
+      font-size: 2em;
+      width: .9em;
+      text-align: center;
+    }
+  }
+
+  &__links {
+    position: absolute;
+    right: 1em;
+    top: 5.8em;
+    z-index: 1;
+
+    @include mq-below(400px) {
+      overflow: hidden;
+      top: 3.3em;
+      width: 9em;
+
+      .fa {
+        height: 1.2em;
+        width: 1em;
+        text-align: center;
+      }
     }
   }
 }
@@ -39,29 +82,15 @@
     height: 100%;
     width: 100%;
   }
-}
 
-.header__links {
-  position: absolute;
-  right: 1em;
-  top: 5.8em;
-  transition: opacity .4s, transform .4s;
-  z-index: 1;
-
-  @include mq-below(400px) {
-    overflow: hidden;
-    top: 3.3em;
-    width: 9em;
-
-    .fa {
-      height: 1.2em;
-      width: 1em;
-      text-align: center;
-    }
+  @include mq-below($tablet) {
+    max-height: 80vh;
+    max-width: 70vw;
   }
 }
 
 .contact-link {
+  color: inherit;
   display: inline-block;
   margin: 0 0 0 1em;
   position: relative;
@@ -87,10 +116,6 @@
   }
 
   &:hover {
-    .fa {
-      color: #222;
-    }
-
     &::before {
       opacity: 1;
       pointer-events: all;
@@ -115,8 +140,6 @@
   }
 
   .fa {
-    color: black;
     font-size: 2em;
-    transition: color $transitionSpeed;
   }
 }

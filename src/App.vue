@@ -3,7 +3,8 @@
     id="app"
     class="app"
     :class="{
-      'is-desktop': !isMobile().any,
+      'app--desktop': !isMobile().any,
+      'app--dark': dark,
       'app--intro': intro,
       'app--initial': intro === 3
     }"
@@ -21,6 +22,9 @@
           ref="logo"
           >Jon Uleis</object
         >
+        <button class="header__light" @click="toggleDark">
+          <i class="fa fa-lightbulb-o" />
+        </button>
         <div class="header__links">
           <a
             v-for="info in contact"
@@ -150,6 +154,12 @@ export default {
   name: "app",
   components: {},
   mounted() {
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      this.dark = true;
+    }
     new Vivus(
       "logo",
       {
@@ -157,8 +167,9 @@ export default {
         delay: 120,
         animTimingFunction: Vivus.EASE,
         onReady: svg => {
-          this.intro--;
           let logo = this.$refs.logo;
+          this.logoSVG = svg.el;
+          this.intro--;
           this.sizeLogo = () => {
             logo.style.transition = "none";
             logo.style.transform = `translate(${window.innerWidth / 2 -
@@ -170,13 +181,16 @@ export default {
           };
           this.sizeLogo();
           window.addEventListener("resize", this.sizeLogo);
-          svg.el.classList.remove("hide");
+          this.dark
+            ? this.logoSVG.classList.add("dark")
+            : this.logoSVG.classList.remove("dark");
+          this.logoSVG.classList.remove("hide");
         }
       },
-      svg => {
+      () => {
         let logo = this.$refs.logo;
         window.removeEventListener("resize", this.sizeLogo);
-        svg.el.classList.add("loaded");
+        this.logoSVG.classList.add("loaded");
         logo.style.transform = "";
         logo.style.width = "";
         logo.style.height = "";
@@ -195,6 +209,12 @@ export default {
       setTimeout(() => {
         e.target.classList.remove("closing");
       }, 600);
+    },
+    toggleDark() {
+      this.dark = !this.dark;
+      this.dark
+        ? this.logoSVG.classList.add("dark")
+        : this.logoSVG.classList.remove("dark");
     }
   },
   data() {
@@ -204,7 +224,9 @@ export default {
       work: data.work,
       photos: data.photos,
       intro: 3,
-      selected: null
+      selected: null,
+      dark: false,
+      logoSVG: null
     };
   }
 };

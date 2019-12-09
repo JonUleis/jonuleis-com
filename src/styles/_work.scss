@@ -54,7 +54,7 @@ $site-tiles: (
       }
     }
 
-    .is-desktop & {
+    .app--desktop & {
       &.site-tile:not(.closing):hover .site-caption {
         background-color: $bg-color;
       }

@@ -51,15 +51,6 @@
       text-align: left;
     }
 
-    a {
-      border-bottom: .05em solid transparent;
-      transition: color .3s, border-color .3s;
-
-      &:hover {
-        border-color: $linkColor;
-      }
-    }
-
     p {
       margin: 0;
       padding: 0;
@@ -112,6 +103,12 @@
   overflow: hidden;
   position: relative;
 
+  @include mq-above($desktop) {
+    &.photo-tile {
+      width: calc((100% - 2em) / 4);
+    }
+  }
+
   @include mq-above($tablet) {
     height: auto;
     width: calc((100% - 1.5em) / 3);
@@ -124,10 +121,6 @@
 
     .site-caption {
       font-size: 1.3vw;
-    }
-
-    &.photo-tile {
-      width: calc((100% - 2em) / 4);
     }
   }
 
@@ -164,7 +157,7 @@
     }
   }
 
-  .is-desktop & {
+  .app--desktop & {
     .site-caption {
       &::before,
       &::after {
@@ -257,7 +250,7 @@
       }
     }
 
-    .is-desktop & {
+    .app--desktop & {
       &:hover {
         .site-caption {
           background: rgba(black, .3);
@@ -287,7 +280,7 @@
   z-index: 2;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
-  .is-desktop & {
+  .app--desktop & {
     transition: transform $transitionSpeed;
   }
 
