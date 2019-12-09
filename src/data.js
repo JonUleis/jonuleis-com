@@ -93,8 +93,8 @@ const data = {
     },
     {
       name: "parquet",
-      url: "https://wideawake.am/",
-      link: "wideawake.am",
+      url: "https://parquet-courts.com/",
+      link: "parquet-courts.com",
       copy:
         "Solo Freelance. Launched April 2018.\nAlbum Teaser & Spotify Player for Rough Trade Records."
     },

@@ -158,11 +158,9 @@
   @include mq-below($tablet) {
     height: 70vw;
     width: 100%;
-  }
 
-  @media (min-width: $tablet) and (max-width: $desktop - 1) {
-    &:nth-child(even):last-child {
-      display: none;
+    .site-caption {
+      font-size: 3.6vw;
     }
   }
 
@@ -287,6 +285,7 @@
   transition: transform $transitionSpeed 0.2s;
   width: 50.01%;
   z-index: 2;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
   .is-desktop & {
     transition: transform $transitionSpeed;
@@ -396,8 +395,8 @@
   }
 
   @include mq-below($tablet) {
-    font-size: 1.2em;
+    font-size: 1.1em;
     line-height: 1.8em;
-    top: -1.8em;
+    top: -1.75em;
   }
 }
