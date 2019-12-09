@@ -26,7 +26,6 @@
     "prettier": "^1.19.1",
     "sass": "^1.23.7",
     "sass-loader": "^8.0.0",
-    "vue-cli-plugin-pug": "^1.0.7",
     "vue-template-compiler": "^2.6.10"
   }
 }

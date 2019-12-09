@@ -29,11 +29,32 @@ const data = {
   ],
   work: [
     {
+      name: "matador",
+      url: "https://features.matadorrecords.com/decade/",
+      link: "matador.com",
+      copy:
+        "Solo Freelance. Launched December 2019.\nSpotify-powered playlist generator for Matador Records."
+    },
+    {
+      name: "tmbgjh",
+      url: "https://jonuleis.com/jh",
+      link: "jonuleis.com",
+      copy:
+        "Personal Project. Launched October 2019.\nOpen-source recreation of 1994 HyperCard program."
+    },
+    {
+      name: "tempt",
+      url: "https://www.temptationislandpickuplines.com/",
+      link: "temptationislandpickuplines.com",
+      copy:
+        "Built at Ralph. Launched September 2019.\nSocial shareable pick-up line generator app."
+    },
+    {
       name: "doomsday",
       url: "http://doomsday.syfy.com/",
       link: "doomsday.syfy.com",
       copy:
-        'Built at Ralph. Launched June 2019.\nGame with High Scores & Shareables for "Krypton".'
+        'Solo Project at Ralph. Launched June 2019.\nGame with High Scores & Shareables for "Krypton".'
     },
     {
       name: "bandersnatch",
@@ -75,14 +96,14 @@ const data = {
       url: "https://wideawake.am/",
       link: "wideawake.am",
       copy:
-        "Solo Freelance. Launched April 2018.\nAlbum Teaser & Spotify Player for Beggars/Rough Trade."
+        "Solo Freelance. Launched April 2018.\nAlbum Teaser & Spotify Player for Rough Trade Records."
     },
     {
       name: "jicks",
       url: "http://howharddoyousparkle.com/",
       link: "howharddoyousparkle.com",
       copy:
-        "Solo Freelance. Launched April 2018.\nSpotify-Connected Quiz Game for Beggars/Matador."
+        "Solo Freelance. Launched April 2018.\nSpotify-Connected Quiz Game for Matador."
     },
     {
       name: "bmdj",
@@ -103,7 +124,7 @@ const data = {
       url: "http://www.thebreedersmusic.com/breedersdigest/",
       link: "thebreedersmusic.com",
       copy:
-        "Solo Freelance. Launched February 2018.\nSpotify-Connected Quiz Game for Beggars/4AD."
+        "Solo Freelance. Launched February 2018.\nSpotify-Connected Quiz Game for 4AD."
     },
     {
       name: "strangerthings",
@@ -181,13 +202,6 @@ const data = {
       link: "grandluxcafe.com",
       copy:
         "Solo Project at Lightmaker. Launched April 2015.\nFull Desktop, Tablet & Mobile Site Redesign."
-    },
-    {
-      name: "wocket",
-      url: "http://wocketwallet.com",
-      link: "wocketwallet.com",
-      copy:
-        "Solo Project at Lightmaker. Launched January 2015.\nResponsive Shopify Site w/Parallax Scrolling."
     },
     {
       name: "ccf",

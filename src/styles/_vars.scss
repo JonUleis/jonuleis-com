@@ -8,18 +8,11 @@ $themeFontCon: 'Roboto Condensed', sans-serif;
 $fontWeightRegular: 300;
 
 // colors
-$mainTextColor: #444;
-$lightTextColor: #666;
 $linkColor: #208AAD;
 
 // animations
 $transitionSpeed: .3s;
 $siteGateSpeed: .6s;
-
-@keyframes rotate {
-  0%   { transform: rotate(0deg);   }
-  100% { transform: rotate(359deg); }
-}
 
 @keyframes fade-out {
   0%   { opacity: 1; }

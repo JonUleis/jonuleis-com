@@ -47,6 +47,18 @@
   top: 5.8em;
   transition: opacity .4s, transform .4s;
   z-index: 1;
+
+  @include mq-below(400px) {
+    overflow: hidden;
+    top: 3.3em;
+    width: 9em;
+
+    .fa {
+      height: 1.2em;
+      width: 1em;
+      text-align: center;
+    }
+  }
 }
 
 .contact-link {

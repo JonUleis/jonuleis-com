@@ -59,14 +59,10 @@
               going strong as ever. I work daily to make the web nicer one pixel
               at a time, specializing in front end and back end development with
               a love for Photoshop and everything in between. In my free time
-              you can usually catch me in the front row
-              <a
-                href="http://www.last.fm/user/capitalq"
-                target="_blank"
-                rel="noopener"
-                >of a concert</a
-              >. If you'd like to reach out for a freelance project or anything
-              else, <a href="mailto:hi@jonuleis.com">email me here</a>. Thanks!
+              you can usually catch me taking photos in the front row of a
+              concert. If you'd like to reach out for a freelance project or
+              anything else, <a href="mailto:hi@jonuleis.com">email me here</a>.
+              Thanks!
             </p>
           </div>
         </div>
@@ -78,7 +74,12 @@
         <div
           v-for="site in work"
           class="site-tile"
-          :class="`site-tile--${site.name}`"
+          :class="[
+            { active: selected === site.name },
+            `site-tile--${site.name}`
+          ]"
+          @click="isMobile().any ? (selected = site.name) : null"
+          @mouseleave="tileOut"
           :key="site.name"
         >
           <div class="site-logo-gate gate-left" />
@@ -119,7 +120,7 @@
           </div>
         </div>
       </section>
-      <section class="section section--bottom">
+      <section class="section">
         <div class="section__title">
           <h2>Find Me &amp; Follow Me</h2>
         </div>
@@ -152,8 +153,8 @@ export default {
     new Vivus(
       "logo",
       {
-        duration: 200,
-        delay: 130,
+        duration: 180,
+        delay: 120,
         animTimingFunction: Vivus.EASE,
         onReady: svg => {
           this.intro--;
@@ -188,13 +189,22 @@ export default {
       }
     );
   },
+  methods: {
+    tileOut(e) {
+      e.target.classList.add("closing");
+      setTimeout(() => {
+        e.target.classList.remove("closing");
+      }, 600);
+    }
+  },
   data() {
     return {
       isMobile,
       contact: data.contact,
       work: data.work,
       photos: data.photos,
-      intro: 3
+      intro: 3,
+      selected: null
     };
   }
 };

@@ -14,7 +14,6 @@
     margin: 0 .25em .5em;
     padding: .6em 0;
     text-align: center;
-    width: 100%;
 
     h2 {
       font-size: 1.5em;
@@ -25,7 +24,12 @@
 .section--tiles {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin: 0 0 1.5em;
+
+  .section__title {
+    width: 100%;
+  }
 }
 
 .info {
@@ -33,17 +37,26 @@
   max-width: $desktop;
   padding: 0 .5em;
 
+  @include mq-below($tablet) {
+    margin-bottom: 2em;
+  }
+
   &__description {
-    color: $lightTextColor;
     font-size: 1.2em;
     line-height: 1.3em;
     text-align: justify;
 
+    @include mq-below($tablet) {
+      font-size: 1.1em;
+      text-align: left;
+    }
+
     a {
-      border-bottom: 1px solid transparent;
+      border-bottom: .05em solid transparent;
+      transition: color .3s, border-color .3s;
 
       &:hover {
-        border-color: lighten($linkColor,10%);
+        border-color: $linkColor;
       }
     }
 
@@ -83,6 +96,10 @@
   a {
     font-size: 1.2em;
     margin: 0 .6em;
+
+    @include mq-below($tablet) {
+      font-size: 1em;
+    }
   }
 }
 
@@ -110,7 +127,7 @@
     }
 
     &.photo-tile {
-      width: calc((100% - 40px) / 4);
+      width: calc((100% - 2em) / 4);
     }
   }
 
@@ -154,11 +171,11 @@
       &::before,
       &::after {
         content: '';
-        height: 10px;
+        height: .8em;
         left: 0;
         opacity: 0;
         position: absolute;
-        top: -10px;
+        top: -.8em;
         width: 100%;
         z-index: 10;
         transition: opacity 0.2s, transform $siteGateSpeed linear;
@@ -208,7 +225,7 @@
       }
 
       .site-photo {
-        transform: rotate(2deg) scale(1.05);
+        transform: rotate(2deg) scale(1.05) translateX(0);
       }
     }
   }
@@ -227,23 +244,6 @@
     .site-link {
       transform: translateX(0);
       transition: transform $transitionSpeed 0.6s, background-color $transitionSpeed;
-    }
-  }
-
-  &.tile-upcoming {
-    .site-link,
-    .site-caption,
-    .site-logo-gate {
-      cursor: default;
-      opacity: 1 !important;
-      transform: translateX(0) translateZ(0) !important;
-    }
-
-    .site-caption {
-      &::before,
-      &::after {
-        opacity: 0 !important;
-      }
     }
   }
 
@@ -338,7 +338,7 @@
 
   .section--photos & {
     background: rgba(black, .8);
-    color: #fff;
+    color: white;
   }
 }
 
@@ -365,20 +365,24 @@
 }
 
 .site-link {
-  border-radius: 3px 0 0 0;
-  color: #fff;
+  border-radius: .2em 0 0 0;
+  color: white;
   display: inline-block;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: .95em;
+  line-height: 2em;
   padding: 0 .5em;
   position: absolute;
   right: 0;
   text-decoration: none;
-  text-shadow: rgba(black, .4) 1px 1px;
-  top: -24px;
+  text-shadow: rgba(black, .4) .1em .1em;
+  top: -2em;
   transform: translateX(105%);
   transition: transform $transitionSpeed, background-color $transitionSpeed;
   z-index: 15;
+
+  &:hover {
+    color: inherit;
+  }
 
   &::before {
     content: "\f14c";
@@ -392,93 +396,8 @@
   }
 
   @include mq-below($tablet) {
-    font-size: 16px;
-    line-height: 26px;
-    top: -26px;
-  }
-}
-
-$site-tiles: (
-  doomsday: #345469,
-  miracleworkers: #e97b81,
-  bandersnatch: #162123,
-  realcountry: #2e2ea5,
-  savethedate: #ff8ebb,
-  purge: #470809,
-  arrested: #f46e21,
-  parquet: #c55347,
-  jicks: #3d3c3c,
-  bmdj: #34464a,
-  wanna: #50374d,
-  breeders: #d8b700,
-  strangerthings: #b30300,
-  ecoin: #1e4079,
-  mon: #6e4323,
-  lph: #569eca,
-  bcs: #c63c40,
-  blackmirror: #f4a999,
-  gilmore: #8ab4c6,
-  lhf: #e9aa26,
-  spotify: #8cbc31,
-  mrrobot: #333,
-  sense8: #71af8f,
-  glc: #a62037,
-  wocket: #444,
-  ccf: #a41b6e,
-  mayo: #003da5,
-  sonos: #efb32f,
-  gg: #227ab7
-);
-
-@each $tile, $color in $site-tiles {
-  .site-tile--#{$tile} {
-    background: url('./assets/site-image-#{$tile}.jpg') center top;
-    background-size: cover;
-    color: #fff;
-
-    .site-logo-gate::before{
-      background-color: $color;
-      background-image: url('./assets/site-logo-#{$tile}.png');
-    }
-
-    $bg-color: rgba(mix($color, black, 85%), .95);
-
-    .site-link {
-      background-color: $bg-color;
-
-      &:hover:not(.mobile-link) {
-        background-color: mix($color, white, 95%);
-      }
-    }
-
-    .is-desktop & {
-      &.site-tile:not(.closing):hover .site-caption {
-        background-color: $bg-color;
-      }
-    }
-
-    &.active .site-caption {
-      background-color: $bg-color;
-    }
-  }
-}
-
-$photo-tiles: (
-  instagram,
-  flickr,
-  tmbg2018,
-  tmbg2015jan,
-  om2015jan,
-  mm2014may,
-  tmbg2013aug,
-  mt2013june,
-  sufjan2011
-);
-
-@each $tile in $photo-tiles {
-  .site-tile--#{$tile} {
-    .site-photo {
-      background-image: url('./assets/photo-#{$tile}.jpg');
-    }
+    font-size: 1.2em;
+    line-height: 1.8em;
+    top: -1.8em;
   }
 }

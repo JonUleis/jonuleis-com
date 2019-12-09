@@ -1,24 +1,5 @@
-# jonuleis-com
+# jonuleis.com
 
-## Project setup
-```
-yarn install
-```
+Portfolio site built in Vue in December 2019.
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+See it live here: [jonuleis.com](https://jonuleis.com)
