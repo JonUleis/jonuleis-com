@@ -9,6 +9,7 @@ $fontWeightRegular: 300;
 
 // colors
 $linkColor: #208AAD;
+$linkColorDark: lighten($linkColor, 40%);
 
 // animations
 $transitionSpeed: .3s;

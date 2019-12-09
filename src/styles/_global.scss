@@ -23,7 +23,7 @@ p a {
   }
 
   .app--dark & {
-    color: lighten($linkColor, 40%);
+    color: $linkColorDark;
   }
 }
 

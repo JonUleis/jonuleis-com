@@ -39,12 +39,21 @@
     position: absolute;
     right: 1em;
     top: 1em;
+    transition: color .3s;
     z-index: 1;
 
     .fa {
       font-size: 2em;
       width: .9em;
       text-align: center;
+    }
+
+    &:hover {
+      color: $linkColor;
+
+      .app--dark & {
+        color: yellow;
+      }
     }
   }
 
