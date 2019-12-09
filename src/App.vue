@@ -22,7 +22,11 @@
           ref="logo"
           >Jon Uleis</object
         >
-        <button class="header__light" @click="toggleDark">
+        <button
+          class="header__light"
+          @click="toggleDark"
+          :data-hover="dark ? 'Lights On' : 'Lights Off'"
+        >
           <i class="fa fa-lightbulb-o" />
         </button>
         <div class="header__links">
@@ -49,7 +53,7 @@
               everything bagel and a pretty website. By day I'm the Lead
               Developer at
               <a href="http://ralphandco.com/" target="_blank" rel="noopener"
-                >Ralph NY</a
+                >Ralph NYC</a
               >
               where I head up a team in creating fun, interactive websites for
               the entertainment industry. At home, I freelance and make sites
@@ -151,7 +155,9 @@ export default {
   name: "app",
   components: {},
   mounted() {
-    if (
+    if (localStorage && localStorage.dark) {
+      this.dark = JSON.parse(localStorage.dark);
+    } else if (
       window.matchMedia &&
       window.matchMedia("(prefers-color-scheme: dark)").matches
     ) {
@@ -215,6 +221,7 @@ export default {
       this.dark
         ? this.logoSVG.classList.add("dark")
         : this.logoSVG.classList.remove("dark");
+      localStorage.dark = this.dark;
     }
   },
   data() {

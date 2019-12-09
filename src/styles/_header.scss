@@ -11,12 +11,8 @@
     transition: opacity .3s ease-out, transform .5s ease-out;
   }
 
-  + .section {
-    transition-delay: .2s;
-  }
-
   + .section + .section {
-    transition-delay: .4s;
+    transition-delay: .3s;
   }
 
   &--animating {
@@ -51,19 +47,6 @@
       font-size: 2em;
       width: .9em;
       text-align: center;
-      transition: color .3s;
-    }
-
-    .app--desktop & {
-      &:hover {
-        color: $linkColor;
-      }
-    }
-
-    .app--desktop.app--dark & {
-      &:hover {
-        color: yellow;
-      }
     }
   }
 
@@ -121,14 +104,20 @@
   margin: 0 0 0 1em;
   position: relative;
 
-  &::before {
+  .fa {
+    font-size: 2em;
+  }
+}
+
+[data-hover] {
+  &::after {
     background: black;
     border-radius: .2em;
     color: white;
     content: attr(data-hover);
     display: inline-block;
     font-family: $themeFont;
-    font-size: .9em;
+    font-size: .8em;
     left: 50%;
     line-height: 2em;
     opacity: 0;
@@ -139,10 +128,15 @@
     transform: translateX(-50%) translateY(2em);
     transition: opacity $transitionSpeed, transform $transitionSpeed;
     white-space: nowrap;
+
+    .app--dark & {
+      background: white;
+      color: black;
+    }
   }
 
   &:hover {
-    &::before {
+    &::after {
       opacity: 1;
       pointer-events: all;
       transform: translateX(-50%);
@@ -150,22 +144,37 @@
   }
 
   .header & {
+    &::after {
+      font-size: .9em;
+    }
+
     &:last-child {
-      &::before {
+      &::after {
         left: auto;
         right: 0;
         transform: translateY(2em);
       }
 
       &:hover {
-        &::before {
+        &::after {
           transform: none;
         }
       }
     }
   }
 
-  .fa {
-    font-size: 2em;
+  &.header__light {
+    &::after {
+      right: 2em;
+      left: auto;
+      top: .1em;
+      transform: translateX(2em);
+    }
+
+    &:hover {
+      &::after {
+        transform: none;
+      }
+    }
   }
 }

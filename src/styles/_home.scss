@@ -247,6 +247,7 @@
       opacity: 1;
       transition: background-color $transitionSpeed;
       transition-delay: 0s;
+      text-shadow: rgba(black, .6) .1em .1em;
 
       &::before,
       &::after {
