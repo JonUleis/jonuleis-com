@@ -38,19 +38,16 @@
           </a>
         </div>
       </header>
-      <section class="section">
-        <div class="section__title">
-          <h2>Hey There</h2>
-        </div>
+      <section class="section section--info">
         <div class="info">
           <div class="info__photo">
             <img src="./assets/jon.jpg" alt="My head" />
           </div>
-          <div class="info__description">
+          <div class="info__description" ref="description">
             <p>
-              How's it going? My name's Jon and I'm a native New Yorker who
-              loves an everything bagel and a pretty website. By day I'm the
-              Lead Developer at
+              How's it going? I'm Jon, a native New Yorker who loves an
+              everything bagel and a pretty website. By day I'm the Lead
+              Developer at
               <a href="http://ralphandco.com/" target="_blank" rel="noopener"
                 >Ralph NY</a
               >
@@ -163,7 +160,7 @@ export default {
     new Vivus(
       "logo",
       {
-        duration: 180,
+        duration: 160,
         delay: 120,
         animTimingFunction: Vivus.EASE,
         onReady: svg => {
@@ -173,7 +170,7 @@ export default {
           this.sizeLogo = () => {
             logo.style.transition = "none";
             logo.style.transform = `translate(${window.innerWidth / 2 -
-              logo.clientWidth / 2}px, ${window.innerHeight / 2 -
+              logo.clientWidth / 2}px, ${(window.innerHeight - 32) / 2 -
               logo.clientHeight / 2}px)`;
             logo.style.width = `${logo.clientWidth}px`;
             logo.style.height = `${logo.clientHeight}px`;
@@ -191,12 +188,15 @@ export default {
         let logo = this.$refs.logo;
         window.removeEventListener("resize", this.sizeLogo);
         this.logoSVG.classList.add("loaded");
-        logo.style.transform = "";
+        logo.style.transform = `translate(${
+          this.$refs.description.getBoundingClientRect().left
+        }px, 0)`;
         logo.style.width = "";
         logo.style.height = "";
         this.intro--;
         this.introDone = () => {
           this.intro = 0;
+          logo.style.transform = "";
           logo.removeEventListener("transitionend", this.introDone);
         };
         logo.addEventListener("transitionend", this.introDone);

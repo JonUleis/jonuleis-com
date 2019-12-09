@@ -32,10 +32,13 @@
   }
 }
 
+.section--info {
+  padding: 0 1em;
+}
+
 .info {
-  margin: 1.5em auto 3em;
+  margin: 2em auto;
   max-width: $desktop;
-  padding: 0 .5em;
 
   @include mq-below($tablet) {
     margin-bottom: 2em;
