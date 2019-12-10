@@ -58,11 +58,9 @@
 
     @include mq-below(400px) {
       overflow: hidden;
-      top: 3.3em;
       width: 9em;
 
       .fa {
-        height: 1.2em;
         width: 1em;
         text-align: center;
       }
