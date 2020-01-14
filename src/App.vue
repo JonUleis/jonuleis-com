@@ -17,7 +17,7 @@
         <img
           svg-inline
           id="logo"
-          class="logo hide drawing"
+          :class="{ logo, hide: logo.hide, drawing: logo.drawing }"
           ref="logo"
           src="./assets/logo.svg"
           alt="Jon Uleis"
@@ -182,13 +182,13 @@ export default {
           };
           this.sizeLogo();
           window.addEventListener("resize", this.sizeLogo);
-          logo.classList.remove("hide");
+          this.logo.hide = false;
         }
       },
       () => {
         let logo = this.$refs.logo;
         window.removeEventListener("resize", this.sizeLogo);
-        logo.classList.remove("drawing");
+        this.logo.drawing = false;
         logo.style.transform = `translate(${
           this.$refs.description.getBoundingClientRect().left
         }px, 0)`;
@@ -226,7 +226,11 @@ export default {
       photos: data.photos,
       intro: 3,
       selected: null,
-      dark: false
+      dark: false,
+      logo: {
+        hide: true,
+        drawing: true
+      }
     };
   }
 };
