@@ -14,14 +14,14 @@
         class="header"
         :class="{ 'header--intro': intro > 1, 'header--animating': intro }"
       >
-        <object
+        <img
+          svg-inline
           id="logo"
-          class="logo"
-          type="image/svg+xml"
-          :data="require('./assets/logo.svg')"
+          class="logo hide drawing"
           ref="logo"
-          >Jon Uleis</object
-        >
+          src="./assets/logo.svg"
+          alt="Jon Uleis"
+        />
         <button
           class="header__light"
           @click="toggleDark"
@@ -153,7 +153,6 @@ import Vivus from "vivus";
 
 export default {
   name: "app",
-  components: {},
   mounted() {
     if (localStorage && localStorage.dark) {
       this.dark = JSON.parse(localStorage.dark);
@@ -169,9 +168,8 @@ export default {
         duration: 160,
         delay: 120,
         animTimingFunction: Vivus.EASE,
-        onReady: svg => {
+        onReady: () => {
           let logo = this.$refs.logo;
-          this.logoSVG = svg.el;
           this.intro--;
           this.sizeLogo = () => {
             logo.style.transition = "none";
@@ -184,26 +182,25 @@ export default {
           };
           this.sizeLogo();
           window.addEventListener("resize", this.sizeLogo);
-          this.dark
-            ? this.logoSVG.classList.add("dark")
-            : this.logoSVG.classList.remove("dark");
-          this.logoSVG.classList.remove("hide");
+          logo.classList.remove("hide");
         }
       },
       () => {
         let logo = this.$refs.logo;
         window.removeEventListener("resize", this.sizeLogo);
-        this.logoSVG.classList.add("loaded");
+        logo.classList.remove("drawing");
         logo.style.transform = `translate(${
           this.$refs.description.getBoundingClientRect().left
         }px, 0)`;
         logo.style.width = "";
         logo.style.height = "";
         this.intro--;
-        this.introDone = () => {
-          this.intro = 0;
-          logo.style.transform = "";
-          logo.removeEventListener("transitionend", this.introDone);
+        this.introDone = event => {
+          if (event.propertyName == "transform") {
+            this.intro = 0;
+            logo.style.transform = "";
+            logo.removeEventListener("transitionend", this.introDone);
+          }
         };
         logo.addEventListener("transitionend", this.introDone);
       }
@@ -218,9 +215,6 @@ export default {
     },
     toggleDark() {
       this.dark = !this.dark;
-      this.dark
-        ? this.logoSVG.classList.add("dark")
-        : this.logoSVG.classList.remove("dark");
       localStorage.dark = this.dark;
     }
   },
@@ -232,8 +226,7 @@ export default {
       photos: data.photos,
       intro: 3,
       selected: null,
-      dark: false,
-      logoSVG: null
+      dark: false
     };
   }
 };

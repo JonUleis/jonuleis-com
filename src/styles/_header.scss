@@ -47,6 +47,11 @@
       font-size: 2em;
       width: .9em;
       text-align: center;
+      transition: transform .3s;
+    }
+
+    &:active .fa {
+      transform: translateY(.1em);
     }
   }
 
@@ -93,6 +98,34 @@
     .header--animating & {
       transition: all .4s .4s ease-out;
     }
+  }
+
+  .a {
+    fill: none;
+    stroke: #000;
+    stroke-linecap: round;
+    stroke-miterlimit: 3;
+    stroke-width: 12px;
+    transition: .4s stroke, .4s stroke-width;
+
+    .app--dark & {
+      stroke: #fff;
+    }
+  }
+
+  &.drawing {
+    .a {
+      stroke: #666;
+      stroke-width: 3px;
+
+      .app--dark & {
+        stroke: #aaa;
+      }
+    }
+  }
+
+  &.hide {
+    visibility: hidden;
   }
 }
 
