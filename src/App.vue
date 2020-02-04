@@ -55,9 +55,10 @@
               <a href="http://ralphandco.com/" target="_blank" rel="noopener"
                 >Ralph NYC</a
               >
-              where I head up a team in creating fun, interactive websites for
-              the entertainment industry. At home, I freelance and make sites
-              for fun and various clients, including some excellent rock bands.
+              where I'm honored to head up a team in creating delightful
+              interactive websites for some of the best names in the
+              entertainment industry. At home, I freelance and make sites for
+              fun and various clients, including some excellent rock bands.
             </p>
             <p>
               My passion for the web began in the days of dial-up and is still
