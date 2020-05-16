@@ -217,6 +217,7 @@ export default {
     toggleDark() {
       this.dark = !this.dark;
       localStorage.dark = this.dark;
+      window.navigator.vibrate([25, 100, 50]);
     }
   },
   data() {
