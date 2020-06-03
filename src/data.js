@@ -29,25 +29,32 @@ const data = {
   ],
   work: [
     {
+      name: "trouserpress",
+      url: "https://trouserpress.com",
+      link: "trouserpress.com",
+      copy:
+        "Solo Freelance. Launched June 2020.\nDigital Relaunch of Historic Alternative Rock Journal."
+    },
+    {
       name: "matador",
       url: "https://features.matadorrecords.com/decade/",
       link: "matador.com",
       copy:
-        "Solo Freelance. Launched December 2019.\nSpotify-powered playlist generator for Matador Records."
+        "Solo Freelance. Launched December 2019.\nSpotify-Powered Playlist Generator for Matador Records."
     },
     {
       name: "tmbgjh",
       url: "https://jonuleis.com/jh",
       link: "jonuleis.com",
       copy:
-        "Personal Project. Launched October 2019.\nOpen-source recreation of 1994 HyperCard program."
+        "Personal Project. Launched October 2019.\nOpen-Source Recreation of 1994 HyperCard Program."
     },
     {
       name: "tempt",
       url: "https://www.temptationislandpickuplines.com/",
       link: "temptationislandpickuplines.com",
       copy:
-        "Built at Ralph. Launched September 2019.\nSocial shareable pick-up line generator app."
+        "Built at Ralph. Launched September 2019.\nSocial Shareable Pick-Up Line Generator App."
     },
     {
       name: "doomsday",
