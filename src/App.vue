@@ -166,7 +166,7 @@ export default {
     new Vivus(
       "logo",
       {
-        duration: 160,
+        duration: 150,
         delay: 120,
         animTimingFunction: Vivus.EASE,
         onReady: () => {

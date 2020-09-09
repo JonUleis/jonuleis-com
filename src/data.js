@@ -29,11 +29,25 @@ const data = {
   ],
   work: [
     {
+      name: "ralph",
+      url: "http://dev.ralphandco.com/",
+      link: "ralphandco.com",
+      copy:
+        "Solo Project at Ralph. Launched August 2020.\nShowcase of Ralph Interactive's Development Work."
+    },
+    {
       name: "trouserpress",
       url: "https://trouserpress.com",
       link: "trouserpress.com",
       copy:
         "Solo Freelance. Launched June 2020.\nDigital Relaunch of Historic Alternative Rock Journal."
+    },
+    {
+      name: "exit",
+      url: "https://www.whoismrrobot.com/exit/",
+      link: "whoismrrobot.com",
+      copy:
+        'Solo Project at Ralph. Launched January 2020.\n"Mr. Robot" Alternate Reality Game. 2020 Emmy Nominee.'
     },
     {
       name: "matador",
@@ -145,7 +159,7 @@ const data = {
       url: "https://e-coin.com/",
       link: "e-coin.com",
       copy:
-        "Built at Ralph. Launched at San Diego Comic-Con 2017.\n2018 Emmy Nominee & 2018 Shorty Winner for Mr. Robot."
+        'Built at Ralph. Launched at San Diego Comic-Con 2017.\n2018 Emmy Nominee & 2018 Shorty Winner for "Mr. Robot."'
     },
     {
       name: "mrrobot",
