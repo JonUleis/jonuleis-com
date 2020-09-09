@@ -50,7 +50,6 @@
     text-align: justify;
 
     @include mq-below($tablet) {
-      font-size: 1.1em;
       text-align: left;
     }
 
@@ -94,6 +93,10 @@
 
     @include mq-below($tablet) {
       font-size: 1em;
+    }
+
+    @include mq-between(340px, $tablet) {
+      margin: 0 .34em;
     }
   }
 }

@@ -26,8 +26,13 @@
           class="header__light"
           @click="toggleDark"
           :data-hover="dark ? 'Lights On' : 'Lights Off'"
+          :aria-label="dark ? 'Dark Mode Off' : 'Dark Mode On'"
         >
-          <i class="fa fa-lightbulb-o" />
+          <i
+            class="fa fa-lightbulb-o"
+            aria-hidden="true"
+            :title="dark ? 'Dark Mode Off' : 'Dark Mode On'"
+          />
         </button>
         <div class="header__links">
           <a
@@ -37,8 +42,9 @@
             rel="noopener"
             :href="info.link"
             :data-hover="info.text"
+            :aria-label="info.text"
             :key="info.text"
-            ><i class="fa" :class="info.icon" />
+            ><i class="fa" :class="info.icon" aria-hidden="true" />
           </a>
         </div>
       </header>
@@ -84,6 +90,9 @@
             { active: selected === site.name },
             `site-tile--${site.name}`
           ]"
+          v-lazy:background-image="
+            require(`@/assets/site-image-${site.name}.jpg`)
+          "
           @click="isMobile().any ? (selected = site.name) : null"
           @mouseleave="tileOut"
           :key="site.name"
@@ -119,8 +128,10 @@
             rel="noopener"
             >{{ site.link }}</a
           >
-
-          <div class="site-photo" />
+          <div
+            class="site-photo"
+            v-lazy:background-image="require(`@/assets/photo-${site.name}.jpg`)"
+          />
           <div class="site-caption">
             {{ site.copy }}
           </div>
@@ -138,8 +149,9 @@
             rel="noopener"
             :href="info.link"
             :data-hover="info.text"
+            :aria-label="info.text"
             :key="info.text"
-            ><i class="fa" :class="info.icon" />
+            ><i class="fa" :class="info.icon" aria-hidden="true" />
           </a>
         </div>
       </section>

@@ -38,7 +38,7 @@ $site-tiles: (
 
 @each $tile, $color in $site-tiles {
   .site-tile--#{$tile} {
-    background: url('./assets/site-image-#{$tile}.jpg') center top;
+    background-position: center top;
     background-size: cover;
     color: white;
 
@@ -65,26 +65,6 @@ $site-tiles: (
 
     &.active .site-caption {
       background-color: $bg-color;
-    }
-  }
-}
-
-$photo-tiles: (
-  instagram,
-  flickr,
-  tmbg2018,
-  tmbg2015jan,
-  om2015jan,
-  mm2014may,
-  tmbg2013aug,
-  mt2013june,
-  sufjan2011
-);
-
-@each $tile in $photo-tiles {
-  .site-tile--#{$tile} {
-    .site-photo {
-      background-image: url('./assets/photo-#{$tile}.jpg');
     }
   }
 }

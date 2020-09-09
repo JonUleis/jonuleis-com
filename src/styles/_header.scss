@@ -5,6 +5,10 @@
   position: relative;
   width: $desktop;
 
+  @include mq-between(340px, $tablet) {
+    height: 9em;
+  }
+
   ~ .section,
   &__light,
   &__links {
@@ -48,6 +52,10 @@
       width: .9em;
       text-align: center;
       transition: transform .3s;
+
+      @include mq-between(340px, $tablet) {
+        font-size: 3em;
+      }
     }
 
     &:active .fa {
@@ -61,13 +69,17 @@
     right: 0;
     z-index: 1;
 
-    @include mq-below(400px) {
-      width: 9em;
+    @include mq-below($tablet) {
+      width: 3.5em * 3;
 
       .fa {
         width: 1em;
         text-align: center;
       }
+    }
+
+    @include mq-below(340px) {
+      width: 3em * 3;
     }
   }
 }
@@ -98,6 +110,11 @@
     .header--animating & {
       transition: all .4s .4s ease-out;
     }
+  }
+
+  @include mq-between(340px, $tablet) {
+    height: 9em;
+    width: 8.2em;
   }
 
   .a {
@@ -135,8 +152,20 @@
   margin: 0 0 0 1em;
   position: relative;
 
+  @include mq-between(340px, $tablet) {
+    margin-left: .5em;
+  }
+
   .fa {
     font-size: 2em;
+
+    @include mq-between(340px, $tablet) {
+      font-size: 3em;
+    }
+  }
+
+  span {
+    display: none;
   }
 }
 
@@ -177,6 +206,10 @@
   .header & {
     &::after {
       font-size: .9em;
+
+      @include mq-between(340px, $tablet) {
+        font-size: 1em;
+      }
     }
 
     &:last-child {
@@ -192,6 +225,22 @@
         }
       }
     }
+
+    @include mq-between(340px, $tablet) {
+      &:nth-child(3) {
+        &::after {
+          left: auto;
+          right: 0;
+          transform: translateY(2em);
+        }
+
+        &:hover {
+          &::after {
+            transform: none;
+          }
+        }
+      }
+    }
   }
 
   &.header__light {
@@ -200,6 +249,11 @@
       left: auto;
       top: .1em;
       transform: translateX(2em);
+
+      @include mq-between(340px, $tablet) {
+        right: 2.75em;
+        top: .3em;
+      }
     }
 
     &:hover {
