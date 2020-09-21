@@ -47,7 +47,7 @@ const data = {
       url: "https://www.whoismrrobot.com/exit/",
       link: "whoismrrobot.com",
       copy:
-        'Solo Project at Ralph. Launched January 2020.\n"Mr. Robot" Alternate Reality Game. 2020 Emmy Nominee.'
+        'Solo Project at Ralph. Launched January 2020.\n2020 Emmy Winner. "Mr. Robot" Alternate Reality Game.'
     },
     {
       name: "matador",
