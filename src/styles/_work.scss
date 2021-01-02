@@ -1,4 +1,7 @@
 $site-tiles: (
+  dundermifflin: #068dce,
+  zazzgenerator: #3e3256,
+  unpregnant: #31336b,
   ralph: #d73494,
   trouserpress: #ef863c,
   exit: #444661,
@@ -52,7 +55,15 @@ $site-tiles: (
     .site-link {
       background-color: $bg-color;
 
-      &:hover:not(.mobile-link) {
+      &.archived {
+        cursor: default;
+
+        &::before {
+          content: none;
+        }
+      }
+
+      &:hover:not(.archived) {
         background-color: mix($color, white, 95%);
       }
     }

@@ -102,12 +102,14 @@
           <div class="site-caption">
             {{ site.copy }}
             <a
+              v-if="site.url"
               class="site-link"
               :href="site.url"
               target="_blank"
               rel="noopener"
               >{{ site.link }}</a
             >
+            <a v-else class="site-link archived">{{ site.link }} (offline)</a>
           </div>
         </div>
       </section>

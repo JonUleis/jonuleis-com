@@ -29,32 +29,53 @@ const data = {
   ],
   work: [
     {
+      name: "dundermifflin",
+      url: "http://dundermifflin.com/",
+      link: "dundermifflin.com",
+      copy:
+        "Built at Ralph. Launched January 2021.\nIn-World Virtual Desktop Site for the NBC Sitcom."
+    },
+    {
+      name: "zazzgenerator",
+      url: "https://www.zazzgenerator.com/",
+      link: "zazzgenerator.com",
+      copy:
+        'Built at Ralph. Launched December 2020.\nVideo Name Generator for Netflix Original Film "The Prom".'
+    },
+    {
+      name: "unpregnant",
+      url: "https://www.hbomax.com/unpregnant/map",
+      link: "hbomax.com",
+      copy:
+        "Built at Ralph. Launched September 2020.\nInteractive Map Site for HBO Original Film."
+    },
+    {
       name: "ralph",
       url: "http://dev.ralphandco.com/",
       link: "ralphandco.com",
       copy:
-        "Solo Project at Ralph. Launched August 2020.\nShowcase of Ralph Interactive's Development Work."
+        "Built at Ralph. Launched August 2020.\nShowcase of Ralph Interactive's Development Work."
     },
     {
       name: "trouserpress",
       url: "https://trouserpress.com",
       link: "trouserpress.com",
       copy:
-        "Solo Freelance. Launched June 2020.\nDigital Relaunch of Historic Alternative Rock Journal."
+        "Freelance Work. Launched June 2020.\nDigital Relaunch of Historic Alternative Rock Journal."
     },
     {
       name: "exit",
       url: "https://www.whoismrrobot.com/exit/",
       link: "whoismrrobot.com",
       copy:
-        'Solo Project at Ralph. Launched January 2020.\n2020 Emmy Winner. "Mr. Robot" Alternate Reality Game.'
+        'Built at Ralph. Launched January 2020.\n2020 Emmy Winner. "Mr. Robot" Alternate Reality Game.'
     },
     {
       name: "matador",
       url: "https://features.matadorrecords.com/decade/",
       link: "matador.com",
       copy:
-        "Solo Freelance. Launched December 2019.\nSpotify-Powered Playlist Generator for Matador Records."
+        "Freelance Work. Launched December 2019.\nSpotify-Powered Playlist Generator for Matador Records."
     },
     {
       name: "tmbgjh",
@@ -72,31 +93,31 @@ const data = {
     },
     {
       name: "doomsday",
-      url: "http://doomsday.syfy.com/",
+      url: false,
       link: "doomsday.syfy.com",
       copy:
-        'Solo Project at Ralph. Launched June 2019.\nGame with High Scores & Shareables for "Krypton".'
+        'Built at Ralph. Launched June 2019.\nGame with High Scores & Shareables for "Krypton".'
     },
     {
       name: "bandersnatch",
       url: "https://tuckersoft.net/ealing20541/",
       link: "tuckersoft.net",
       copy:
-        "Solo Project at Ralph. Launched December 2018.\nIn-World Retro Easter Egg Site for Netflix Original."
+        "Built at Ralph. Launched December 2018.\nIn-World Retro Easter Egg Site for Netflix Original."
     },
     {
       name: "realcountry",
       url: "https://www.realcountry.tv/",
       link: "realcountry.tv",
       copy:
-        "Solo Project at Ralph. Launched November 2018.\nReality Show Hub with Bios, Performances & Polls."
+        "Built at Ralph. Launched November 2018.\nReality Show Hub with Bios, Performances & Polls."
     },
     {
       name: "savethedate",
       url: "https://jonuleis.com/jomanda/",
       link: "jomanda.life",
       copy:
-        "Solo Freelance. Launched September 2018.\nMobile-Focused Wedding Invitation Game."
+        "Freelance Work. Launched September 2018.\nMobile-Focused Wedding Invitation Game."
     },
     {
       name: "purge",
@@ -107,24 +128,24 @@ const data = {
     },
     {
       name: "arrested",
-      url: "https://www.votebluth.com/",
+      url: false,
       link: "votebluth.com",
       copy:
-        "Solo Project at Ralph. Launched May 2018.\nIn-World Retro Campaign Site for Netflix Original."
+        "Built at Ralph. Launched May 2018.\nIn-World Retro Campaign Site for Netflix Original."
     },
     {
       name: "parquet",
-      url: "https://parquet-courts.com/",
+      url: "https://parquet-courts.com/wideawake/",
       link: "parquet-courts.com",
       copy:
-        "Solo Freelance. Launched April 2018.\nAlbum Teaser & Spotify Player for Rough Trade Records."
+        "Freelance Work. Launched April 2018.\nAlbum Teaser & Spotify Player for Rough Trade Records."
     },
     {
       name: "jicks",
       url: "http://howharddoyousparkle.com/",
       link: "howharddoyousparkle.com",
       copy:
-        "Solo Freelance. Launched April 2018.\nSpotify-Connected Quiz Game for Matador."
+        "Freelance Work. Launched April 2018.\nSpotify-Connected Quiz Game for Matador."
     },
     {
       name: "bmdj",
@@ -138,25 +159,25 @@ const data = {
       url: "https://wannatou.ch/",
       link: "wannatou.ch",
       copy:
-        "Solo Freelance. Launched February 2018.\nInteractive Streaming App & Info Site for WANNA."
+        "Freelance Work. Launched February 2018.\nInteractive Streaming App & Info Site for WANNA."
     },
     {
       name: "breeders",
       url: "http://www.thebreedersmusic.com/breedersdigest/",
       link: "thebreedersmusic.com",
       copy:
-        "Solo Freelance. Launched February 2018.\nSpotify-Connected Quiz Game for 4AD."
+        "Freelance Work. Launched February 2018.\nSpotify-Connected Quiz Game for 4AD."
     },
     {
       name: "strangerthings",
-      url: "https://feeddart.com/",
+      url: false,
       link: "feeddart.com",
       copy:
         "Built at Ralph. Launched November 2017.\nShareable Video Generator for Netflix Original."
     },
     {
       name: "ecoin",
-      url: "https://e-coin.com/",
+      url: "https://www.e-coin.com/",
       link: "e-coin.com",
       copy:
         'Built at Ralph. Launched at San Diego Comic-Con 2017.\n2018 Emmy Nominee & 2018 Shorty Winner for "Mr. Robot."'
@@ -180,11 +201,11 @@ const data = {
       url: "http://lphishiring.com/",
       link: "lphishiring.com",
       copy:
-        'Solo Project at Ralph. Launched April 2017.\nIn-World Restaurant Site for "Better Call Saul".'
+        'Built at Ralph. Launched April 2017.\nIn-World Restaurant Site for "Better Call Saul".'
     },
     {
       name: "bcs",
-      url: "http://bcsbingo.amc.com/",
+      url: false,
       link: "bcsbingo.com",
       copy:
         "Built at Ralph. Launched April 2017.\nWeekly Trivia Game for AMC/Acura Sponsorship."
@@ -205,7 +226,7 @@ const data = {
     },
     {
       name: "lhf",
-      url: "http://www.londonhasfallen.com/",
+      url: false,
       link: "londonhasfallen.com",
       copy:
         "Built at Ralph. Launched November 2015.\nResponsive Site for Focus Features Film."
@@ -222,28 +243,27 @@ const data = {
       url: "http://www.grandluxcafe.com",
       link: "grandluxcafe.com",
       copy:
-        "Solo Project at Lightmaker. Launched April 2015.\nFull Desktop, Tablet & Mobile Site Redesign."
+        "Built at Lightmaker. Launched April 2015.\nFull Desktop, Tablet & Mobile Site Redesign."
     },
     {
       name: "ccf",
       url: "http://www.thecheesecakefactory.com",
       link: "thecheesecakefactory.com",
       copy:
-        "Solo Project at Lightmaker. Launched December 2014.\nFull Desktop & Mobile Site Redesign, Single-Page App."
+        "Built at Lightmaker. Launched December 2014.\nFull Desktop & Mobile Site Redesign, Single-Page App."
     },
     {
       name: "sonos",
-      url: "http://www.sonos.com",
+      url: false,
       link: "sonos.com",
       copy:
         "Built at Lightmaker. Launched September 2014.\nResponsive Redesign of Main Site and Support Portal."
     },
     {
       name: "mayo",
-      url: "http://www.mayoclinichealthsystem.com",
+      url: false,
       link: "mayoclinichealthsystem.com",
-      copy:
-        "Solo Project at Lightmaker. Launched August 2014.\nMobile Site Redesign."
+      copy: "Built at Lightmaker. Launched August 2014.\nMobile Site Redesign."
     }
   ],
   photos: [
