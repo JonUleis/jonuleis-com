@@ -1,5 +1,5 @@
 # jonuleis.com
 
-Portfolio site built in Vue in December 2019.
+Personal portfolio site built in Vue.
 
-See it live here: [jonuleis.com](https://jonuleis.com)
+See it live: [jonuleis.com](https://jonuleis.com)

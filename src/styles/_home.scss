@@ -190,19 +190,19 @@
       }
     }
 
-    &:not(.closing):hover {
+    &.open {
       .gate-left {
         transform: translateX(-105%) rotate(10deg);
         transform-origin: right top;
-        transition-delay: $siteGateSpeed+0.1s;
       }
 
       .gate-right {
         transform: translateX(105%) rotate(-10deg);
         transform-origin: left top;
-        transition-delay: $siteGateSpeed+0.1s;
       }
+    }
 
+    &:not(.closing):hover {
       .site-caption {
         transition-delay: $siteGateSpeed;
 

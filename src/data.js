@@ -29,22 +29,36 @@ const data = {
   ],
   work: [
     {
+      name: "franz",
+      url: "https://franzferdinand.com",
+      link: "franzferdinand.com",
+      copy:
+        "Freelance Work. Launched November 2021.\nFull Site Relaunch for Acclaimed Indie Rock Group."
+    },
+    {
+      name: "insidejob",
+      url: "https://cognitocareers.com",
+      link: "cognitocareers.com",
+      copy:
+        "Built at Ralph. Launched October 2021.\nIn-World Interactive Quiz for Netflix Original."
+    },
+    {
       name: "dundermifflin",
-      url: "http://dundermifflin.com/",
+      url: "/sites/dundermifflin/",
       link: "dundermifflin.com",
       copy:
         "Built at Ralph. Launched January 2021.\nIn-World Virtual Desktop Site for the NBC Sitcom."
     },
     {
       name: "zazzgenerator",
-      url: "https://www.zazzgenerator.com/",
+      url: false,
       link: "zazzgenerator.com",
       copy:
         'Built at Ralph. Launched December 2020.\nVideo Name Generator for Netflix Original Film "The Prom".'
     },
     {
       name: "unpregnant",
-      url: "https://www.hbomax.com/unpregnant/map",
+      url: "/sites/unpregnant/",
       link: "hbomax.com",
       copy:
         "Built at Ralph. Launched September 2020.\nInteractive Map Site for HBO Original Film."
@@ -107,7 +121,7 @@ const data = {
     },
     {
       name: "realcountry",
-      url: "https://www.realcountry.tv/",
+      url: false,
       link: "realcountry.tv",
       copy:
         "Built at Ralph. Launched November 2018.\nReality Show Hub with Bios, Performances & Polls."
@@ -121,7 +135,7 @@ const data = {
     },
     {
       name: "purge",
-      url: "https://www.thepurge.tv/",
+      url: false,
       link: "thepurge.tv",
       copy:
         "Built at Ralph. Launched July 2018.\nImmersive Video-Driven Series Launch Site."
@@ -135,21 +149,21 @@ const data = {
     },
     {
       name: "parquet",
-      url: "https://parquet-courts.com/wideawake/",
+      url: false,
       link: "parquet-courts.com",
       copy:
         "Freelance Work. Launched April 2018.\nAlbum Teaser & Spotify Player for Rough Trade Records."
     },
     {
       name: "jicks",
-      url: "http://howharddoyousparkle.com/",
+      url: false,
       link: "howharddoyousparkle.com",
       copy:
         "Freelance Work. Launched April 2018.\nSpotify-Connected Quiz Game for Matador."
     },
     {
       name: "bmdj",
-      url: "https://coach.dating/",
+      url: false,
       link: "coach.dating",
       copy:
         "Built at Ralph. Launched February 2018.\nIn-World Shareable Generator for Netflix Original."
@@ -177,7 +191,7 @@ const data = {
     },
     {
       name: "ecoin",
-      url: "https://www.e-coin.com/",
+      url: false,
       link: "e-coin.com",
       copy:
         'Built at Ralph. Launched at San Diego Comic-Con 2017.\n2018 Emmy Nominee & 2018 Shorty Winner for "Mr. Robot."'
@@ -191,7 +205,7 @@ const data = {
     },
     {
       name: "mon",
-      url: "http://clashofthecupcakes.com/",
+      url: false,
       link: "clashofthecupcakes.com",
       copy:
         'Built at Ralph. Launched May 2017.\n"Clash of the Cupcakes" Site for Netflix Original.'
@@ -201,7 +215,7 @@ const data = {
       url: "http://lphishiring.com/",
       link: "lphishiring.com",
       copy:
-        'Built at Ralph. Launched April 2017.\nIn-World Restaurant Site for "Better Call Saul".'
+        'Built at Ralph. Launched April 2017.\nIn-World Restaurant Site for "Breaking Bad" Universe.'
     },
     {
       name: "bcs",

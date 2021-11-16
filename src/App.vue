@@ -94,6 +94,7 @@
             require(`@/assets/site-image-${site.name}.jpg`)
           "
           @click="isMobile().any ? (selected = site.name) : null"
+          @mouseenter="tileOver"
           @mouseleave="tileOut"
           :key="site.name"
         >
@@ -109,7 +110,7 @@
               rel="noopener"
               >{{ site.link }}</a
             >
-            <a v-else class="site-link archived">{{ site.link }} (offline)</a>
+            <a v-else class="site-link archived">{{ site.link }} (archived)</a>
           </div>
         </div>
       </section>
@@ -222,7 +223,17 @@ export default {
     );
   },
   methods: {
+    tileOver(e) {
+      e.target.classList.add("hover");
+      setTimeout(() => {
+        if (e.target.classList.contains("hover")) {
+          e.target.classList.add("open");
+        }
+      }, 700);
+    },
     tileOut(e) {
+      e.target.classList.remove("hover");
+      e.target.classList.remove("open");
       e.target.classList.add("closing");
       setTimeout(() => {
         e.target.classList.remove("closing");
