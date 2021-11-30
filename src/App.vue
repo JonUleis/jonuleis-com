@@ -6,7 +6,7 @@
       'app--desktop': !isMobile().any,
       'app--dark': dark,
       'app--intro': intro,
-      'app--initial': intro === 3
+      'app--initial': intro === 3,
     }"
   >
     <div class="wrapper">
@@ -88,7 +88,7 @@
           class="site-tile"
           :class="[
             { active: selected === site.name },
-            `site-tile--${site.name}`
+            `site-tile--${site.name}`,
           ]"
           v-lazy:background-image="
             require(`@/assets/site-image-${site.name}.jpg`)
@@ -199,7 +199,7 @@ export default {
           this.sizeLogo();
           window.addEventListener("resize", this.sizeLogo);
           this.logo.hide = false;
-        }
+        },
       },
       () => {
         let logo = this.$refs.logo;
@@ -211,7 +211,7 @@ export default {
         logo.style.width = "";
         logo.style.height = "";
         this.intro--;
-        this.introDone = event => {
+        this.introDone = (event) => {
           if (event.propertyName == "transform") {
             this.intro = 0;
             logo.style.transform = "";
@@ -226,7 +226,10 @@ export default {
     tileOver(e) {
       e.target.classList.add("hover");
       setTimeout(() => {
-        if (e.target.classList.contains("hover")) {
+        if (
+          e.target.classList.contains("hover") &&
+          !e.target.classList.contains("closing")
+        ) {
           e.target.classList.add("open");
         }
       }, 700);
@@ -243,7 +246,7 @@ export default {
       this.dark = !this.dark;
       localStorage.dark = this.dark;
       window.navigator.vibrate([25, 100, 50]);
-    }
+    },
   },
   data() {
     return {
@@ -256,10 +259,10 @@ export default {
       dark: false,
       logo: {
         hide: true,
-        drawing: true
-      }
+        drawing: true,
+      },
     };
-  }
+  },
 };
 </script>
 

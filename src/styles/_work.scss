@@ -1,7 +1,11 @@
 $site-tiles: (
+  sbtb: #d33371,
+  spotify: #4e9b2d,
   franz: #2e2319,
   insidejob: #274435,
-  dundermifflin: #068dce,
+  homeshake: #53668f,
+  tmbghotel: #ff6930,
+  dundermifflin: #1b7ba9,
   zazzgenerator: #3e3256,
   unpregnant: #31336b,
   ralph: #d73494,
@@ -30,7 +34,6 @@ $site-tiles: (
   blackmirror: #f4a999,
   gilmore: #8ab4c6,
   lhf: #e9aa26,
-  spotify: #61a942,
   mrrobot: #333,
   sense8: #71af8f,
   glc: #a62037,
@@ -38,7 +41,7 @@ $site-tiles: (
   ccf: #a0427b,
   mayo: #21478a,
   sonos: #efb32f,
-  gg: #227ab7
+  gg: #227ab7,
 );
 
 @each $tile, $color in $site-tiles {
@@ -47,12 +50,12 @@ $site-tiles: (
     background-size: cover;
     color: white;
 
-    .site-logo-gate::before{
+    .site-logo-gate::before {
       background-color: $color;
-      background-image: url('./assets/site-logo-#{$tile}.png');
+      background-image: url("./assets/site-logo-#{$tile}.png");
     }
 
-    $bg-color: rgba(mix($color, black, 85%), .95);
+    $bg-color: rgba(mix($color, black, 85%), 0.95);
 
     .site-link {
       background-color: $bg-color;
