@@ -189,9 +189,9 @@ export default {
           this.intro--;
           this.sizeLogo = () => {
             logo.style.transition = "none";
-            logo.style.transform = `translate(${window.innerWidth / 2 -
-              logo.clientWidth / 2}px, ${(window.innerHeight - 32) / 2 -
-              logo.clientHeight / 2}px)`;
+            logo.style.transform = `translate(${
+              window.innerWidth / 2 - logo.clientWidth / 2
+            }px, ${(window.innerHeight - 32) / 2 - logo.clientHeight / 2}px)`;
             logo.style.width = `${logo.clientWidth}px`;
             logo.style.height = `${logo.clientHeight}px`;
             logo.style.transition = "";

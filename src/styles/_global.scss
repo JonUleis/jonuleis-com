@@ -15,8 +15,8 @@ body {
 p a {
   color: $linkColor;
   text-decoration: none;
-  border-bottom: .05em solid transparent;
-  transition: color .3s, border-color .3s;
+  border-bottom: 0.05em solid transparent;
+  transition: color 0.3s, border-color 0.3s;
 
   &:hover {
     border-color: currentColor;
@@ -29,7 +29,7 @@ p a {
 
 .app {
   padding: 1em 0 0;
-  transition: background-color .3s, color .3s;
+  transition: background-color 0.3s, color 0.3s;
 
   &--intro {
     position: absolute;
@@ -57,7 +57,12 @@ p a {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: $fontWeightRegular;
   margin: 0;
 }

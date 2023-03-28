@@ -3,8 +3,8 @@ $tablet: 768px;
 $desktop: 980px;
 
 // fonts
-$themeFont: 'Roboto', sans-serif;
-$themeFontCon: 'Roboto Condensed', sans-serif;
+$themeFont: "Roboto", sans-serif;
+$themeFontCon: "Roboto Condensed", sans-serif;
 $fontWeightRegular: 300;
 
 // colors
@@ -12,12 +12,16 @@ $linkColor: #2e7891;
 $linkColorDark: lighten($linkColor, 40%);
 
 // animations
-$transitionSpeed: .3s;
-$siteGateSpeed: .6s;
+$transitionSpeed: 0.3s;
+$siteGateSpeed: 0.6s;
 
 @keyframes fade-out {
-  0%   { opacity: 1; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 // utils

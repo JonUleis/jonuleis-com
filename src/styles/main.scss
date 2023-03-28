@@ -1,10 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300|Roboto:300&display=swap');
-@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
-@import '~normalize.css';
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300|Roboto:300&display=swap");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css");
+@import "~normalize.css";
 
-@import
-"vars",
-"global",
-"header",
-"home",
-"work";
+@import "vars", "global", "header", "home", "work";
