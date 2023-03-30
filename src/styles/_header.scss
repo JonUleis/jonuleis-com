@@ -170,10 +170,8 @@
 }
 
 [data-hover] {
+  &::before,
   &::after {
-    background: black;
-    border-radius: 0.2em;
-    color: white;
     content: attr(data-hover);
     display: inline-block;
     font-family: $themeFont;
@@ -181,13 +179,19 @@
     left: 50%;
     line-height: 2em;
     opacity: 0;
-    padding: 0 0.5em;
     pointer-events: none;
     position: absolute;
     top: -2.2em;
     transform: translateX(-50%) translateY(2em);
-    transition: opacity $transitionSpeed, transform $transitionSpeed;
     white-space: nowrap;
+  }
+
+  &::after {
+    background: black;
+    border-radius: 0.2em;
+    color: white;
+    padding: 0 0.5em;
+    transition: opacity $transitionSpeed, transform $transitionSpeed;
 
     .app--dark & {
       background: white;
@@ -195,11 +199,20 @@
     }
   }
 
+  &::before {
+    // hitbox for better hovering
+    padding: 0 0.5em 2em;
+  }
+
   &:hover {
+    &::before,
     &::after {
-      opacity: 1;
       pointer-events: all;
       transform: translateX(-50%);
+    }
+
+    &::after {
+      opacity: 1;
     }
   }
 
@@ -244,9 +257,11 @@
   }
 
   &.header__light {
+    &::before,
     &::after {
       right: 2em;
       left: auto;
+      padding: 0 0.5em;
       top: 0.1em;
       transform: translateX(2em);
 
@@ -257,6 +272,7 @@
     }
 
     &:hover {
+      &::before,
       &::after {
         transform: none;
       }

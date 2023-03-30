@@ -71,9 +71,12 @@
               going strong as ever. I work daily to make the web nicer one pixel
               at a time, specializing in front end and back end development with
               a love for Photoshop and everything in between. In my free time
-              you can usually catch me taking photos in the front row of a
-              concert. If you'd like to reach out for a freelance project or
-              anything else, <a href="mailto:hi@jonuleis.com">email me here</a>.
+              you can usually catch me at a concert taking photos or videos for
+              my
+              <a href="https://www.youtube.com/capitalq" target="_blank"
+                >YouTube channel</a
+              >. If you'd like to reach out for a freelance project or anything
+              else, please <a href="mailto:hi@jonuleis.com">send an email</a>.
               Thanks!
             </p>
           </div>
