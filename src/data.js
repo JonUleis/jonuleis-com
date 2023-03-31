@@ -30,9 +30,9 @@ const data = {
   work: [
     {
       name: "discogs",
-      url: "https://dev.ralphandco.com/sites/nightmare/",
+      url: "https://chrome.google.com/webstore/detail/discogs-total-price-sorte/ockmalikhlgdfljhgihfbohafhbjpibf",
       link: "chrome.google.com",
-      copy: "Personal Project. Launched March 2023.\nGoogle Chrome Extension for Improving Discogs.",
+      copy: "Personal Project. Launched March 2023.\nGoogle Chrome Extension for Enhancing Discogs.",
     },
     {
       name: "davis",
