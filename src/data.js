@@ -29,6 +29,12 @@ const data = {
   ],
   work: [
     {
+      name: "bmawful",
+      url: "https://youareawful.com/",
+      link: "youareawful.com",
+      copy: "Built at Ralph. Launched June 2023.\nImage Generator for Netflix Original Series.",
+    },
+    {
       name: "discogs",
       url: "https://chrome.google.com/webstore/detail/discogs-total-price-sorte/ockmalikhlgdfljhgihfbohafhbjpibf",
       link: "chrome.google.com",
@@ -36,8 +42,8 @@ const data = {
     },
     {
       name: "davis",
-      url: "https://www.peacocktv.com/stream-tv/mrs-davis/chat",
-      link: "peacocktv.com",
+      url: "/sites/davis/",
+      link: "peacocktv.com (mirror)",
       copy: "Built at Ralph. Launched February 2023.\nImitation AI Chatbot Teaser for Peacock Series.",
     },
     {
@@ -78,8 +84,8 @@ const data = {
     },
     {
       name: "thirst",
-      url: "https://www.thirstgenerator.com/",
-      link: "thirstgenerator.com",
+      url: "/sites/vday/",
+      link: "thirstgenerator.com (mirror)",
       copy: "Built at Ralph. Launched February 2022.\nInteractive Valentine's Day Game for Netflix @MOST.",
     },
     {
@@ -174,7 +180,7 @@ const data = {
     },
     {
       name: "tempt",
-      url: "https://www.temptationislandpickuplines.com/",
+      url: false,
       link: "temptationislandpickuplines.com",
       copy: "Built at Ralph. Launched September 2019.\nSocial Shareable Pick-Up Line Generator App.",
     },
@@ -291,18 +297,6 @@ const data = {
       url: "https://www.townofstarshollow.org/",
       link: "townofstarshollow.org",
       copy: "Built at Ralph. Launched October 2016.\nIn-World WordPress Blog for Netflix Original.",
-    },
-    {
-      name: "lhf",
-      url: false,
-      link: "londonhasfallen.com",
-      copy: "Built at Ralph. Launched November 2015.\nResponsive Site for Focus Features Film.",
-    },
-    {
-      name: "glc",
-      url: "http://www.grandluxcafe.com",
-      link: "grandluxcafe.com",
-      copy: "Built at Lightmaker. Launched April 2015.\nFull Desktop, Tablet & Mobile Site Redesign.",
     },
     {
       name: "ccf",

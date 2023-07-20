@@ -56,20 +56,23 @@
           <div class="info__description" ref="description">
             <p>
               How's it going? I'm Jon, a native New Yorker who loves an
-              everything bagel and a pretty website. By day I'm the Lead
-              Developer at
-              <a href="http://ralphandco.com/" target="_blank" rel="noopener"
-                >Ralph NYC</a
+              everything bagel and a pretty website. Most recently I was Lead
+              Developer at Ralph Creative, where I headed up a team in creating
+              delightful,
+              <a
+                href="https://www.emmys.com/bios/ralph-interactive"
+                target="_blank"
+                >Emmy Award-winning</a
               >
-              where I'm honored to head up a team in creating delightful, Emmy
-              Award-winning interactive websites for some of the best names in
-              the entertainment industry. At home, I freelance and make sites
-              for fun and various clients, including some excellent rock bands.
+              interactive websites for some of the best names in the
+              entertainment industry. Currently, I freelance and make sites for
+              personal fun and various clients, including some excellent rock
+              bands.
             </p>
             <p>
               My passion for the web began in the days of dial-up and is still
               going strong as ever. I work daily to make the web nicer one pixel
-              at a time, specializing in front end and back end development with
+              at a time, specializing in front-end and back-end development with
               a love for Photoshop and everything in between. In my free time
               you can usually catch me at a concert taking photos or videos for
               my
@@ -82,10 +85,10 @@
           </div>
         </div>
       </section>
+      <div class="section__title">
+        <h2>Web Development</h2>
+      </div>
       <section class="section section--tiles">
-        <div class="section__title">
-          <h2>Web Development</h2>
-        </div>
         <div
           v-for="site in work"
           class="site-tile"
@@ -93,14 +96,17 @@
             { active: selected === site.name },
             `site-tile--${site.name}`,
           ]"
-          v-lazy:background-image="
-            require(`@/assets/site-image-${site.name}.jpg`)
-          "
           @click="isMobile().any ? (selected = site.name) : null"
           @mouseenter="tileOver"
           @mouseleave="tileOut"
           :key="site.name"
         >
+          <div
+            class="site-bg"
+            v-lazy:background-image="
+              require(`@/assets/site-image-${site.name}.jpg`)
+            "
+          />
           <div class="site-logo-gate gate-left" />
           <div class="site-logo-gate gate-right" />
           <div class="site-caption">
@@ -117,10 +123,10 @@
           </div>
         </div>
       </section>
+      <div class="section__title">
+        <h2>Concert Photography</h2>
+      </div>
       <section class="section section--tiles section--photos">
-        <div class="section__title">
-          <h2>Concert Photography</h2>
-        </div>
         <div
           v-for="site in photos"
           class="site-tile photo-tile"
@@ -143,10 +149,10 @@
           </div>
         </div>
       </section>
+      <div class="section__title">
+        <h2>Find Me &amp; Follow Me</h2>
+      </div>
       <section class="section">
-        <div class="section__title">
-          <h2>Find Me &amp; Follow Me</h2>
-        </div>
         <div class="social">
           <a
             v-for="info in contact"

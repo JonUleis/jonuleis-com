@@ -1,8 +1,9 @@
 $site-tiles: (
+  bmawful: #681515,
   discogs: #1f1f1f,
   davis: #006ea1,
   nightmare: #d16200,
-  adh: #520c0c,
+  adh: #866400,
   ken: #0095c4,
   rezi: #b30000,
   halo: #6498af,
@@ -56,10 +57,6 @@ $site-tiles: (
 
 @each $tile, $color in $site-tiles {
   .site-tile--#{$tile} {
-    background-position: center top;
-    background-size: cover;
-    color: white;
-
     .site-logo-gate::before {
       background-color: $color;
       background-image: url("./assets/site-logo-#{$tile}.png");

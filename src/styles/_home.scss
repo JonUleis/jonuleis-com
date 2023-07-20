@@ -1,6 +1,6 @@
 .section {
   overflow: auto;
-  padding: 0 0.75em;
+  padding: 0 1em;
   position: relative;
 
   &__title {
@@ -11,9 +11,13 @@
     font-family: $themeFont;
     image-rendering: pixelated;
     line-height: 1;
-    margin: 0 0.25em 0.5em;
+    margin: 0 1em 0.5em;
     padding: 0.6em 0;
     text-align: center;
+
+    @include mq-below($tablet) {
+      font-size: 0.9em;
+    }
 
     h2 {
       font-size: 1.5em;
@@ -22,13 +26,67 @@
 }
 
 .section--tiles {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  color: white;
+  column-gap: 0.5em;
+  display: grid;
   margin: 0 0 1.5em;
+  row-gap: 0.5em;
+  text-align: center;
 
-  .section__title {
-    width: 100%;
+  @include mq-above($desktop) {
+    &.section--photos {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  @include mq-below($tablet) {
+    grid-template-columns: 1fr;
+
+    .site-tile {
+      height: 70vw;
+    }
+
+    .site-caption {
+      font-size: 3.6vw;
+    }
+  }
+
+  @include mq-above($tablet) {
+    grid-template-columns: 1fr 1fr;
+
+    .site-tile::before {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+
+    .site-caption {
+      font-size: 1.9vw;
+    }
+  }
+
+  @include mq-above($desktop) {
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .site-caption {
+      font-size: 1.3vw;
+    }
+  }
+
+  @include mq-above(1440px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    .site-caption {
+      font-size: 0.95vw;
+    }
+  }
+
+  @include mq-above(1920px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    .site-caption {
+      font-size: 0.76vw;
+    }
   }
 }
 
@@ -50,6 +108,7 @@
     text-align: justify;
 
     @include mq-below($tablet) {
+      font-size: 1.1em;
       text-align: left;
     }
 
@@ -106,63 +165,8 @@
   font-family: $themeFontCon;
   font-weight: 300;
   line-height: 1.2em;
-  margin: 0 0.25em 0.5em;
   overflow: hidden;
   position: relative;
-
-  @include mq-above($desktop) {
-    &.photo-tile {
-      width: calc((100% - 2em) / 4);
-    }
-  }
-
-  @include mq-above($tablet) {
-    height: auto;
-    width: calc((100% - 1.5em) / 3);
-
-    &::before {
-      content: "";
-      display: block;
-      padding-bottom: 100%;
-    }
-
-    .site-caption {
-      font-size: 1.3vw;
-    }
-  }
-
-  @include mq-above(1440px) {
-    width: calc((100% - 2em) / 4);
-
-    .site-caption {
-      font-size: 0.95vw;
-    }
-  }
-
-  @include mq-above(1920px) {
-    width: calc((100% - 2.5em) / 5);
-
-    .site-caption {
-      font-size: 0.76vw;
-    }
-  }
-
-  @include mq-between($tablet, $desktop) {
-    width: calc((100% - 1em) / 2);
-
-    .site-caption {
-      font-size: 1.9vw;
-    }
-  }
-
-  @include mq-below($tablet) {
-    height: 70vw;
-    width: 100%;
-
-    .site-caption {
-      font-size: 3.6vw;
-    }
-  }
 
   .app--desktop & {
     .site-caption {
@@ -278,8 +282,19 @@
   }
 }
 
-.site-logo-gate {
+.site-bg {
+  background-position: center top;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
   bottom: 0;
+  top: 0;
+  transform: translateZ(0);
+}
+
+.site-logo-gate {
+  bottom: -1px;
   cursor: pointer;
   opacity: 0.98;
   overflow: hidden;
@@ -287,7 +302,7 @@
   top: 0;
   transition: transform $transitionSpeed 0.2s;
   transform: translateZ(0);
-  width: 50.01%;
+  width: calc(50% + 1px);
   z-index: 2;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
@@ -304,7 +319,7 @@
   }
 
   &.gate-right {
-    right: 0;
+    right: -1px;
 
     &::before {
       right: 0;
@@ -325,7 +340,7 @@
 
 .site-caption {
   background: rgba(black, 0.15);
-  bottom: 0;
+  bottom: -1px;
   cursor: default;
   font-size: 0.9em;
   left: 0;
