@@ -56,26 +56,27 @@
           <div class="info__description" ref="description">
             <p>
               How's it going? I'm Jon, a native New Yorker who loves an
-              everything bagel and a pretty website. Most recently I was Lead
-              Developer at Ralph Creative, where I headed up a team in creating
-              delightful,
+              everything bagel and a pretty website. As Lead Front-End Developer
+              at
+              <a href="http://ralphandco.com/" target="_blank" rel="noopener"
+                >Ralph NYC</a
+              >, I've headed up a team in creating delightful,
               <a
                 href="https://www.emmys.com/bios/ralph-interactive"
                 target="_blank"
                 >Emmy Award-winning</a
               >
               interactive websites for some of the best names in the
-              entertainment industry. Currently, I freelance and make sites for
-              personal fun and various clients, including some excellent rock
-              bands.
+              entertainment industry. At home, I freelance and make sites for
+              fun and various clients, including some excellent rock bands.
             </p>
             <p>
-              My passion for the web began in the days of dial-up and is still
-              going strong as ever. I work daily to make the web nicer one pixel
-              at a time, specializing in front-end and back-end development with
-              a love for Photoshop and everything in between. In my free time
-              you can usually catch me at a concert taking photos or videos for
-              my
+              My passion for the web began the day I touched a keyboard and is
+              still going strong as ever. I work daily to make the web nicer one
+              pixel at a time, specializing in front-end and back-end
+              development with a love for Photoshop and everything in between.
+              In my free time you can usually catch me at a concert taking
+              photos or videos for my
               <a href="https://www.youtube.com/capitalq" target="_blank"
                 >YouTube channel</a
               >. If you'd like to reach out for a freelance project or anything
@@ -190,7 +191,7 @@ export default {
     new Vivus(
       "logo",
       {
-        duration: 150,
+        duration: 130,
         delay: 120,
         animTimingFunction: Vivus.EASE,
         onReady: () => {
